@@ -2,6 +2,6 @@ package Generics;
 
 public class Orange extends Fruit{
     public Orange(){
-        super("Orange");
+        super(1.5f);
     }
 }

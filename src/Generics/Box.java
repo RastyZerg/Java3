@@ -20,16 +20,12 @@ public class Box <T extends Fruit>{
     }
 
     public boolean compare(Box box){
-        return this.getWeight() == box.getWeight();
+        return Math.abs(this.getWeight() - box.getWeight()) < 0.0000001f;
     }
 
-    public void join(Box box){
-        if (box.fruits.getFirst().getClass() == this.fruits.getFirst().getClass()){
+    public void join(Box<? super T> box){
             box.fruits.addAll(this.fruits);
             this.fruits.clear();
         }
-        else {
-            System.out.println("Fruits are different");
-        }
-    }
+
 }
